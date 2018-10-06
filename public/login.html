@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Healthy Lee</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+  
+    <link rel="stylesheet" type="text/css" href="css\index.css">
+    <link rel="stylesheet" type="text/css" href="css\styles2.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+
+<meta name="google-signin-client_id" content="14260591580-t1v1cb70mslrs5nkratutgp3hjvlbvl7.apps.googleusercontent.com">
+            
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+
+
+
+    <meta charset="utf-8">
+    <meta name="author" content="John Doe">
+    <meta name="description" content="">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
+    
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="shortcut icon" type="image/ico" href="img/favicon.ico" />
+    <!-- Plugin-CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- Main-Stylesheets -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
+   
+    
+
+
+        <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+
+
+</head>
+  <body>
+      <br/>
+      <br/>
+      <br/>
+    <div class="main-div">
+        <h1 style="color: #ffffff;-webkit-text-stroke-width: 1px;-webkit-text-stroke-color: #f1c40f;">Login</h1>
+        <input type="email" id="email" placeholder="email"autocomplete="current-password"/>
+        <input type="password" id="password" placeholder="password"autocomplete="current-password"/>
+        <button onclick="signIn()">Login</button>
+        <button onclick="singUpPage()">Sign up</button>
+        <script>
+            function singUpPage(){
+                window.location.href="signUp.html"; 
+            }
+        </script>
+
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+        <script>
+            function onSignIn(googleUser) {
+              var profile = googleUser.getBasicProfile();
+
+
+             
+              console.log('ID: ' + profile.getId());
+              console.log('Name: ' + profile.getName());
+              console.log('Image URL: ' + profile.getImageUrl());
+              console.log('Email: ' + profile.getEmail()); 
+
+            alert('Login SS');
+              //window.location.href="userProfile.html";
+            }
+            
+            </script> 
+
+            
+
+
+
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
+    <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCIp8QEA8R0qg8Ly16cW08y_gRB6EfYiEE",
+    authDomain: "healthy-lee-1531858128540.firebaseapp.com",
+    databaseURL: "https://healthy-lee-1531858128540.firebaseio.com",
+    projectId: "healthy-lee-1531858128540",
+    storageBucket: "healthy-lee-1531858128540.appspot.com",
+    messagingSenderId: "14260591580"
+  };
+  firebase.initializeApp(config); 
+</script>
+<script src="js/signIn.js"></script>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+
+
+  </body>
+</html>
