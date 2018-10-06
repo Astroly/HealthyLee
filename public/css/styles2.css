@@ -15,7 +15,7 @@ input, button{
     border: 1px solid #ccc;
     border-radius: 5px solid #ccc;
     background-color: #a09696ec;
-    
+    -webkit-box-shadow: 0 0 0px 1000px #837d7d5b inset !important;
 }
 .main-div input{
     display: block;
@@ -26,6 +26,7 @@ input, button{
     outline: none;
     width: 100%;
     margin-bottom: 20px;
+    -webkit-box-shadow: 0 0 0px 1000px #837d7d5b inset !important;
 }
 .main-div input:focus{
     border: 1px solid #777;
@@ -45,7 +46,7 @@ input, button{
     -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
     margin-bottom: 20px;
-
+    -webkit-box-shadow: 0 0 0px 1000px #837d7d5b inset !important;
 }
 .main-div button:hover{
     background: #fff;

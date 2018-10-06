@@ -1,11 +1,10 @@
 <!doctype html>
 <html lang="en">
-  
     <head>
         <title>Title</title>
     
         
-<link rel="stylesheet" type="text/css" href="css\index.css">
+        <link rel="stylesheet" type="text/css" href="css\index.css">
         <link rel="stylesheet" type="text/css" href="css\styles2.css">
     
     
@@ -49,41 +48,87 @@
     
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+     
       </head>
   <body>
-    <br/>
-    <br/>
-    <br/>
-      <div class="main-div">
-        <h3 style="color: #ffffff;-webkit-text-stroke-width: 1px;-webkit-text-stroke-color: #f1c40f;">Profile</h3>
-                    <br/>
-                    <input type="text" id="name" placeholder="Name"autocomplete="current-password"/>
-                    <input type="text" id="lastname" placeholder="Lastname"autocomplete="current-password"/>
-                    <input type="email" id="emailRegis" placeholder="email"autocomplete="current-password"/>
-                    <input type="password" id="passwordRegis" placeholder="Password"autocomplete="current-password"/>
-                    <input type="password" id="confirmPasswordRegis" placeholder="Confirm Password"autocomplete="current-password"/>
-                    <button onclick="saveData()">Sign up</button>
-
-                    
-                    <button onclick="logInPage()">Login</button>
-                    <script>
-                        function logInPage(){
-                            window.location.href="login.html"; 
-                        }
-                    </script>
-                        <a href="editProfile.html" class="btn btn-primary">Edit Profile</a>
-                        <a href="payment.html" class="btn btn-primary">Payment</a>
-      </div>
-                    
-    
-
-
-
-
-
-                    
-                      
+      <div class="container">
+          <div class="row">
+            <br/>
+            <br/>
+            <br>
+          </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
        
+       
+              <div class="panel panel-info">
+                <div class="panel-heading">
+                  <h3 class="panel-title">User Information</h3>
+                </div>
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="http://babyinfoforyou.com/wp-content/uploads/2014/10/avatar-300x300.png" class="img-circle img-responsive"> </div>
+                    
+                    <!--<div class="col-xs-10 col-sm-10 hidden-md hidden-lg"> <br>
+                      <dl>
+                        <dt>DEPARTMENT:</dt>
+                        <dd>Administrator</dd>
+                        <dt>HIRE DATE</dt>
+                        <dd>11/12/2013</dd>
+                        <dt>DATE OF BIRTH</dt>
+                           <dd>11/12/2013</dd>
+                        <dt>GENDER</dt>
+                        <dd>Male</dd>
+                      </dl>
+                    </div>-->
+                    <div class=" col-md-9 col-lg-9 "> 
+                      <table class="table table-user-information">
+                        <tbody>
+                          <tr>
+                            <td>Name:</td>
+                            <!--<td>Programming</td>-->
+                          </tr>
+                          <tr>
+                            <td>Company:</td>
+                           <!-- <td>06/23/2013</td>-->
+                          </tr>
+                          <tr>
+                            <td>Type company:</td>
+                           <!-- <td>01/24/1988</td>-->
+                          </tr>
+                       
+                             <tr>
+                                 <tr>
+                            <td>Address:</td>
+                          <!--   <td>Female</td>-->
+                          </tr>
+                            <tr>
+                            <td>Telephone Number:</td>
+                           <!-- <td>Kathmandu,Nepal</td>-->
+                          </tr>
+                          <tr>
+                            <td>E-mail:</td>
+                            <td><a href=""></a></td>
+                          </tr>
+                            <td>Status:</td>
+                            <!-- <td>123-4567-890(Landline)<br><br>555-4567-890(Mobile)-->
+                            </td>
+                               
+                          </tr>
+                         
+                        </tbody>
+                      </table>
+                      
+                      <a href="editProfile.html" class="btn btn-primary">Edit Profile</a>
+                      <a href="payment.html" class="btn btn-primary">Payment</a>
+                      
+                    </div>
+                  </div>
+                </div>
+                    
+              </div>
+            </div>
+          </div>
+        </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
