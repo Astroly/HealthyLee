@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-        <link rel="stylesheet" type="text/css" href="css\index.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
 
 
 
@@ -84,13 +84,7 @@
                                       </form>
                                 </div>
 
-                                <div class="form-group row">
-                                    <label class="col-lg-3 col-form-label form-control-label">Telephone Number</label>
-                                    <div class="col-lg-9">
-                                        <input class="form-control" type="text"  autofocus type="integer"  placeholder="Telephone Number">
-                                    </div>
-                                </div>
-
+                                
                                 <div class="form-group row">
                                     
                                     <label class="col-lg-3 col-form-label form-control-label">ที่อยู่</label>
@@ -139,26 +133,48 @@
                                         </div>
                                     </div>
 
-                      
+                      <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label form-control-label">Telephone Number</label>
+                                    <div class="col-lg-9">
+                                        <input class="form-control" type="text"  autofocus type="integer"  placeholder="Telephone Number">
+                                    </div>
+                                </div>
+
 
                                
             
                                 <div class="form-group row">
-                                    <label class="col-lg-3 col-form-label form-control-label"></label>
+                                    <label class="col-lg-3 col-form-label form-control-label">Manu</label>
                                     <div class="col-lg-9">
-                                        
-                                       
+                                            <div class="col-lg-9">
+                                                    <input class="form-control"type="text" id="manu1" name="manu" placeholder="Healthy Manu">
+                                                    <input class="form-control" type="integer" id="price1" name="price" placeholder="price"><br/>
+                                                    <input class="form-control"type="text" id="manu2" name="manu" placeholder="Healthy Manu">
+                                                    <input class="form-control"type="integer" id="price2" name="price" placeholder="price"><br/>
+                                                    <input class="form-control"type="text" id="manu3" name="manu" placeholder="Healthy Manu">
+                                                    <input class="form-control"type="integer" id="price3" name="price" placeholder="price"><br/>
+                                                    
+                                                  
+    
+                                                    <br/>
+                                 </div>       
                                             
                                        
-                                    </div>
+                                   
                                 </div>
                             </form>
                         </div>
                     </div>
                     <!-- /form user info -->
- <a  class="btn btn-secondary" herf="userProfile.html" value="">Cancel</a>
-                                        <a class="btn btn-primary" herf="userProfile.html" value="">Save Changes</a>
-                                          
+                    <a class="btn btn-secondary" onclick="back()" value="">Cancel</a>
+                    <script >
+                        function back(){
+                            window.location.href="userProfile.html";
+                        }
+                    </script>
+ <!--<a  class="btn btn-secondary" herf="userProfile.html" value=""></a>-->
+                                        <a class="btn btn-primary" onclick="saveEdit();" value="">Save Changes</a>
+                                        <script type="text/javascript" src="js/saveEdit.js"></script>
                 </div>
 	</div>
 </div>

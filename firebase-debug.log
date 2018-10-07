@@ -1,0 +1,343 @@
+[debug] [2018-10-07T02:35:52.487Z] ----------------------------------------------------------------------
+[debug] [2018-10-07T02:35:52.490Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Pavilion15\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy
+[debug] [2018-10-07T02:35:52.490Z] CLI Version:   5.0.0
+[debug] [2018-10-07T02:35:52.490Z] Platform:      win32
+[debug] [2018-10-07T02:35:52.490Z] Node Version:  v8.9.0
+[debug] [2018-10-07T02:35:52.490Z] Time:          Sun Oct 07 2018 09:35:52 GMT+0700 (SE Asia Standard Time)
+[debug] [2018-10-07T02:35:52.491Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-10-07T02:35:52.503Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-10-07T02:35:52.504Z] > authorizing via signed-in user
+[debug] [2018-10-07T02:35:52.504Z] [iam] checking project healthy-lee-1531858128540 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2018-10-07T02:35:52.507Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/healthy-lee-1531858128540:testIamPermissions  
+
+[debug] [2018-10-07T02:35:53.984Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-07T02:35:53.986Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/healthy-lee-1531858128540  
+ 
+[debug] [2018-10-07T02:35:55.135Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'healthy-lee-1531858128540'...
+[info] 
+[info] i  deploying database, storage, firestore, functions, hosting
+[info] Running command: npm --prefix "%RESOURCE_DIR%" run lint
+[info] +  functions: Finished running predeploy script.
+[info] i  database: checking rules syntax...
+[debug] [2018-10-07T02:36:02.843Z] >>> HTTP REQUEST PUT https://healthy-lee-1531858128540.firebaseio.com/.settings/rules.json?dryRun=true  
+ {
+  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */
+  "rules": {
+    ".read": true,
+    ".write": true
+  }
+}
+[debug] [2018-10-07T02:36:04.012Z] <<< HTTP RESPONSE 200
+[info] +  database: rules syntax for database healthy-lee-1531858128540 is valid
+[debug] [2018-10-07T02:36:04.014Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/healthy-lee-1531858128540  
+ 
+[debug] [2018-10-07T02:36:05.651Z] <<< HTTP RESPONSE 200
+[info] i  storage: checking storage.rules for compilation errors...
+[debug] [2018-10-07T02:36:05.654Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/healthy-lee-1531858128540:test  
+
+[debug] [2018-10-07T02:36:07.289Z] <<< HTTP RESPONSE 200
+[info] +  storage: rules file storage.rules compiled successfully
+[info] i  firestore: checking firestore.rules for compilation errors...
+[debug] [2018-10-07T02:36:07.295Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/healthy-lee-1531858128540:test  
+
+[debug] [2018-10-07T02:36:08.928Z] <<< HTTP RESPONSE 200
+[info] +  firestore: rules file firestore.rules compiled successfully
+[debug] [2018-10-07T02:36:08.932Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase serve --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "dependencies": {
+    "firebase-admin": "~6.0.0",
+    "firebase-functions": "^2.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^4.12.0",
+    "eslint-plugin-promise": "^3.6.0"
+  },
+  "private": true
+}
+[info] i  functions: ensuring necessary APIs are enabled...
+[debug] [2018-10-07T02:36:08.934Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/healthy-lee-1531858128540?view=CONSUMER_VIEW  
+ 
+[debug] [2018-10-07T02:36:08.935Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/runtimeconfig.googleapis.com/projectSettings/healthy-lee-1531858128540?view=CONSUMER_VIEW  
+ 
+[debug] [2018-10-07T02:36:11.085Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-07T02:36:11.088Z] <<< HTTP RESPONSE 200
+[info] +  functions: all necessary APIs are enabled
+[debug] [2018-10-07T02:36:11.090Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/healthy-lee-1531858128540  
+ 
+[debug] [2018-10-07T02:36:12.511Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-07T02:36:12.512Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/14260591580:getServerAppConfig  
+ 
+[debug] [2018-10-07T02:36:13.022Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-07T02:36:13.024Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/healthy-lee-1531858128540/versions  
+
+[debug] [2018-10-07T02:36:14.969Z] <<< HTTP RESPONSE 200
+[info] i  storage: uploading rules storage.rules...
+[debug] [2018-10-07T02:36:14.971Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/healthy-lee-1531858128540/rulesets  
+
+[debug] [2018-10-07T02:36:16.505Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-07T02:36:16.506Z] [rules] created ruleset projects/healthy-lee-1531858128540/rulesets/70c0e058-ae70-497e-8889-50fe0bc1f7a8
+[info] i  firestore: uploading rules firestore.rules...
+[debug] [2018-10-07T02:36:16.508Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/healthy-lee-1531858128540/rulesets  
+
+[debug] [2018-10-07T02:36:16.509Z] >>> HTTP REQUEST GET https://firestore.googleapis.com/v1beta1/projects/healthy-lee-1531858128540/databases/(default)/indexes  
+ 
+[debug] [2018-10-07T02:36:18.041Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-07T02:36:18.044Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-07T02:36:18.044Z] [rules] created ruleset projects/healthy-lee-1531858128540/rulesets/731183ad-186d-4a6a-aea4-1437b916ef75
+[info] i  functions: preparing functions directory for uploading...
+[debug] [2018-10-07T02:36:18.049Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/healthy-lee-1531858128540/configs  
+ 
+[debug] [2018-10-07T02:36:18.655Z] <<< HTTP RESPONSE 200
+[info] i  hosting[healthy-lee-1531858128540]: beginning deploy...
+[info] i  hosting[healthy-lee-1531858128540]: found 251 files in public
+[debug] [2018-10-07T02:36:19.149Z] [hosting] hash cache [cHVibGlj] stored for 251 files
+[debug] [2018-10-07T02:36:19.150Z] [hosting][hash queue][FINAL]
+[debug] [2018-10-07T02:36:19.150Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/healthy-lee-1531858128540/versions/7e2a21ee0993aa2a:populateFiles  
+ <request body omitted>
+[debug] [2018-10-07T02:36:22.341Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-07T02:36:22.344Z] [hosting][populate queue][FINAL]
+[debug] [2018-10-07T02:36:22.344Z] [hosting] uploads queued: 1
+[debug] [2018-10-07T02:36:25.619Z] [hosting][upload] editProfile.html (b113ae4627cc34a037baf464b733fb223148382319cb55693378d9181a3aa50a) HTTP ERROR 400 : { 'x-guploader-uploadid': 'AEnB2UohPzeEly2Fapjoq6ZvhYt3X1PMKSS9qjA-yUttYuEAvjvWtSugMmFmzJG2n5lslPWF3Guk-7om5WTrbY7HBerOvi_50Q',
+  'content-length': '37',
+  date: 'Sun, 07 Oct 2018 02:36:28 GMT',
+  server: 'UploadServer',
+  'content-type': 'text/html; charset=UTF-8',
+  'alt-svc': 'quic=":443"; ma=2592000; v="44,43,39,35"',
+  connection: 'close' } Couldn't process request (status=400)
+[debug] [2018-10-07T02:36:26.026Z] [uploadQueue] Retrying task b113ae4627cc34a037baf464b733fb223148382319cb55693378d9181a3aa50a
+[debug] [2018-10-07T02:36:29.306Z] [hosting][upload] editProfile.html (b113ae4627cc34a037baf464b733fb223148382319cb55693378d9181a3aa50a) HTTP ERROR 400 : { 'x-guploader-uploadid': 'AEnB2Upw_tMnAjATHEArwQTij9HZ5TyQqxI8EW1lubptqa5tqK4MyPqNQUywbK9DrF4MZBZIA2SrvhLiqqVZ5FP_GQlBmKyj4w',
+  'content-length': '37',
+  date: 'Sun, 07 Oct 2018 02:36:32 GMT',
+  server: 'UploadServer',
+  'content-type': 'text/html; charset=UTF-8',
+  'alt-svc': 'quic=":443"; ma=2592000; v="44,43,39,35"',
+  connection: 'close' } Couldn't process request (status=400)
+[debug] [2018-10-07T02:36:30.107Z] [uploadQueue] Retrying task b113ae4627cc34a037baf464b733fb223148382319cb55693378d9181a3aa50a
+[debug] [2018-10-07T02:36:33.314Z] [hosting][upload] editProfile.html (b113ae4627cc34a037baf464b733fb223148382319cb55693378d9181a3aa50a) HTTP ERROR 400 : { 'x-guploader-uploadid': 'AEnB2Uqr3BGE5isCzvXeshuf_W68iMCrbQAoV05RxY14SHNj3fowQcSPc0I8NLdL3cVq5HHvGGt5wGAzq7bH9XWsE8-dj5SBVw',
+  'content-length': '37',
+  date: 'Sun, 07 Oct 2018 02:36:36 GMT',
+  server: 'UploadServer',
+  'content-type': 'text/html; charset=UTF-8',
+  'alt-svc': 'quic=":443"; ma=2592000; v="44,43,39,35"',
+  connection: 'close' } Couldn't process request (status=400)
+[debug] [2018-10-07T02:36:34.915Z] [uploadQueue] Retrying task b113ae4627cc34a037baf464b733fb223148382319cb55693378d9181a3aa50a
+[debug] [2018-10-07T02:36:38.009Z] [hosting][upload] editProfile.html (b113ae4627cc34a037baf464b733fb223148382319cb55693378d9181a3aa50a) HTTP ERROR 400 : { 'x-guploader-uploadid': 'AEnB2UpdZTJRyacGRDSi4rVMOpxO-uT0pBSO_5-6HdK_HbbbTX_e3YJDciiQKiBfDPv86z67W34AwjV6dGL8TA2Mbu0bCoBxig',
+  'content-length': '37',
+  date: 'Sun, 07 Oct 2018 02:36:41 GMT',
+  server: 'UploadServer',
+  'content-type': 'text/html; charset=UTF-8',
+  'alt-svc': 'quic=":443"; ma=2592000; v="44,43,39,35"',
+  connection: 'close' } Couldn't process request (status=400)
+[debug] [2018-10-07T02:36:41.211Z] [uploadQueue] Retrying task b113ae4627cc34a037baf464b733fb223148382319cb55693378d9181a3aa50a
+[debug] [2018-10-07T02:36:44.254Z] [hosting][upload] editProfile.html (b113ae4627cc34a037baf464b733fb223148382319cb55693378d9181a3aa50a) HTTP ERROR 400 : { 'x-guploader-uploadid': 'AEnB2UrYPKXk5mk41iaqJGFg1xflXC6CUk4YZGzIB7LgTqtXS-9Jwt-POfmEnmg4LkPBAjaudlLdExgGU3Ezp86FBfaPCf7Nsg',
+  'content-length': '37',
+  date: 'Sun, 07 Oct 2018 02:36:47 GMT',
+  server: 'UploadServer',
+  'content-type': 'text/html; charset=UTF-8',
+  'alt-svc': 'quic=":443"; ma=2592000; v="44,43,39,35"',
+  connection: 'close' } Couldn't process request (status=400)
+[debug] [2018-10-07T02:36:50.655Z] [uploadQueue] Retrying task b113ae4627cc34a037baf464b733fb223148382319cb55693378d9181a3aa50a
+[debug] [2018-10-07T02:36:53.778Z] [hosting][upload] editProfile.html (b113ae4627cc34a037baf464b733fb223148382319cb55693378d9181a3aa50a) HTTP ERROR 400 : { 'x-guploader-uploadid': 'AEnB2Upq3f_ppR7qY5awvVoxpPM5wr8c9SbLXeLES9IqVeGLWYXR63rqzf_3mVzAFqOd8mUEjXbYM1_67n3IX2Vu1NxAudRCJw',
+  'content-length': '37',
+  date: 'Sun, 07 Oct 2018 02:36:56 GMT',
+  server: 'UploadServer',
+  'content-type': 'text/html; charset=UTF-8',
+  'alt-svc': 'quic=":443"; ma=2592000; v="44,43,39,35"',
+  connection: 'close' } Couldn't process request (status=400)
+[debug] [2018-10-07T02:36:53.779Z] [uploadQueue] Retries exhausted for task b113ae4627cc34a037baf464b733fb223148382319cb55693378d9181a3aa50a :
+[debug] [2018-10-07T02:36:53.780Z] [hosting][upload queue][FINAL]
+[debug] [2018-10-07T02:36:54.022Z] Error: Unexpected error while uploading file.
+    at Request._callback (C:\Users\Pavilion15\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\hosting\uploader.js:241:31)
+    at Request.self.callback (C:\Users\Pavilion15\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:185:22)
+    at emitTwo (events.js:126:13)
+    at Request.emit (events.js:214:7)
+    at Request.<anonymous> (C:\Users\Pavilion15\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:1161:10)
+    at emitOne (events.js:116:13)
+    at Request.emit (events.js:211:7)
+    at IncomingMessage.<anonymous> (C:\Users\Pavilion15\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:1083:12)
+    at Object.onceWrapper (events.js:313:30)
+    at emitNone (events.js:111:20)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2018-10-07T02:38:32.179Z] ----------------------------------------------------------------------
+[debug] [2018-10-07T02:38:32.182Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Pavilion15\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy
+[debug] [2018-10-07T02:38:32.182Z] CLI Version:   5.0.0
+[debug] [2018-10-07T02:38:32.182Z] Platform:      win32
+[debug] [2018-10-07T02:38:32.182Z] Node Version:  v8.9.0
+[debug] [2018-10-07T02:38:32.183Z] Time:          Sun Oct 07 2018 09:38:32 GMT+0700 (SE Asia Standard Time)
+[debug] [2018-10-07T02:38:32.183Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-10-07T02:38:32.197Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-10-07T02:38:32.198Z] > authorizing via signed-in user
+[debug] [2018-10-07T02:38:32.198Z] [iam] checking project healthy-lee-1531858128540 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2018-10-07T02:38:32.200Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/healthy-lee-1531858128540:testIamPermissions  
+
+[debug] [2018-10-07T02:38:33.630Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-07T02:38:33.634Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/healthy-lee-1531858128540  
+ 
+[debug] [2018-10-07T02:38:34.949Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'healthy-lee-1531858128540'...
+[info] 
+[info] i  deploying database, storage, firestore, functions, hosting
+[info] Running command: npm --prefix "%RESOURCE_DIR%" run lint
+[info] +  functions: Finished running predeploy script.
+[info] i  database: checking rules syntax...
+[debug] [2018-10-07T02:38:43.410Z] >>> HTTP REQUEST PUT https://healthy-lee-1531858128540.firebaseio.com/.settings/rules.json?dryRun=true  
+ {
+  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */
+  "rules": {
+    ".read": true,
+    ".write": true
+  }
+}
+[debug] [2018-10-07T02:38:44.575Z] <<< HTTP RESPONSE 200
+[info] +  database: rules syntax for database healthy-lee-1531858128540 is valid
+[debug] [2018-10-07T02:38:44.577Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/healthy-lee-1531858128540  
+ 
+[debug] [2018-10-07T02:38:46.422Z] <<< HTTP RESPONSE 200
+[info] i  storage: checking storage.rules for compilation errors...
+[debug] [2018-10-07T02:38:46.425Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/healthy-lee-1531858128540:test  
+
+[debug] [2018-10-07T02:38:48.056Z] <<< HTTP RESPONSE 200
+[info] +  storage: rules file storage.rules compiled successfully
+[info] i  firestore: checking firestore.rules for compilation errors...
+[debug] [2018-10-07T02:38:48.063Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/healthy-lee-1531858128540:test  
+
+[debug] [2018-10-07T02:38:49.593Z] <<< HTTP RESPONSE 200
+[info] +  firestore: rules file firestore.rules compiled successfully
+[debug] [2018-10-07T02:38:49.598Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase serve --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "dependencies": {
+    "firebase-admin": "~6.0.0",
+    "firebase-functions": "^2.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^4.12.0",
+    "eslint-plugin-promise": "^3.6.0"
+  },
+  "private": true
+}
+[info] i  functions: ensuring necessary APIs are enabled...
+[debug] [2018-10-07T02:38:49.600Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/healthy-lee-1531858128540?view=CONSUMER_VIEW  
+ 
+[debug] [2018-10-07T02:38:49.602Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/runtimeconfig.googleapis.com/projectSettings/healthy-lee-1531858128540?view=CONSUMER_VIEW  
+ 
+[debug] [2018-10-07T02:38:51.695Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-07T02:38:51.710Z] <<< HTTP RESPONSE 200
+[info] +  functions: all necessary APIs are enabled
+[debug] [2018-10-07T02:38:51.712Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/healthy-lee-1531858128540  
+ 
+[debug] [2018-10-07T02:38:53.074Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-07T02:38:53.075Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/14260591580:getServerAppConfig  
+ 
+[debug] [2018-10-07T02:38:53.588Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-07T02:38:53.592Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/healthy-lee-1531858128540/versions  
+
+[debug] [2018-10-07T02:38:55.532Z] <<< HTTP RESPONSE 200
+[info] i  storage: uploading rules storage.rules...
+[debug] [2018-10-07T02:38:55.534Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/healthy-lee-1531858128540/rulesets  
+
+[debug] [2018-10-07T02:38:57.068Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-07T02:38:57.068Z] [rules] created ruleset projects/healthy-lee-1531858128540/rulesets/3bf59754-a912-46b3-84d9-f4e950dcba68
+[info] i  firestore: uploading rules firestore.rules...
+[debug] [2018-10-07T02:38:57.071Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/healthy-lee-1531858128540/rulesets  
+
+[debug] [2018-10-07T02:38:57.072Z] >>> HTTP REQUEST GET https://firestore.googleapis.com/v1beta1/projects/healthy-lee-1531858128540/databases/(default)/indexes  
+ 
+[debug] [2018-10-07T02:38:58.603Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-07T02:38:58.603Z] [rules] created ruleset projects/healthy-lee-1531858128540/rulesets/76737e80-1ccb-4a3b-8adc-9cb4786adf5a
+[debug] [2018-10-07T02:38:58.911Z] <<< HTTP RESPONSE 200
+[info] i  functions: preparing functions directory for uploading...
+[debug] [2018-10-07T02:38:58.915Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/healthy-lee-1531858128540/configs  
+ 
+[debug] [2018-10-07T02:38:59.476Z] <<< HTTP RESPONSE 200
+[info] i  hosting[healthy-lee-1531858128540]: beginning deploy...
+[info] i  hosting[healthy-lee-1531858128540]: found 251 files in public
+[debug] [2018-10-07T02:39:00.023Z] [hosting] hash cache [cHVibGlj] stored for 251 files
+[debug] [2018-10-07T02:39:00.023Z] [hosting][hash queue][FINAL]
+[debug] [2018-10-07T02:39:00.023Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/healthy-lee-1531858128540/versions/f1ded24ac1b9720c:populateFiles  
+ <request body omitted>
+[debug] [2018-10-07T02:39:02.540Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-07T02:39:02.543Z] [hosting][populate queue][FINAL]
+[debug] [2018-10-07T02:39:02.543Z] [hosting] uploads queued: 1
+[debug] [2018-10-07T02:39:06.397Z] [hosting][upload queue][FINAL]
+[info] +  hosting[healthy-lee-1531858128540]: file upload complete
+[debug] [2018-10-07T02:39:06.398Z] [hosting] deploy completed after 6573ms
+[info] i  database: releasing rules...
+[debug] [2018-10-07T02:39:06.707Z] >>> HTTP REQUEST PUT https://healthy-lee-1531858128540.firebaseio.com/.settings/rules.json  
+ {
+  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */
+  "rules": {
+    ".read": true,
+    ".write": true
+  }
+}
+[debug] [2018-10-07T02:39:07.622Z] <<< HTTP RESPONSE 200
+[info] +  database: rules for database healthy-lee-1531858128540 released successfully
+[debug] [2018-10-07T02:39:07.624Z] [rules] releasing firebase.storage/healthy-lee-1531858128540.appspot.com with ruleset projects/healthy-lee-1531858128540/rulesets/3bf59754-a912-46b3-84d9-f4e950dcba68
+[debug] [2018-10-07T02:39:07.625Z] >>> HTTP REQUEST PATCH https://firebaserules.googleapis.com/v1/projects/healthy-lee-1531858128540/releases/firebase.storage/healthy-lee-1531858128540.appspot.com  
+
+[debug] [2018-10-07T02:39:09.131Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-07T02:39:09.131Z] [rules] updated release projects/healthy-lee-1531858128540/releases/firebase.storage/healthy-lee-1531858128540.appspot.com
+[info] +  storage: released rules storage.rules to firebase.storage/healthy-lee-1531858128540.appspot.com
+[debug] [2018-10-07T02:39:09.132Z] [rules] releasing cloud.firestore with ruleset projects/healthy-lee-1531858128540/rulesets/76737e80-1ccb-4a3b-8adc-9cb4786adf5a
+[debug] [2018-10-07T02:39:09.133Z] >>> HTTP REQUEST PATCH https://firebaserules.googleapis.com/v1/projects/healthy-lee-1531858128540/releases/cloud.firestore  
+
+[debug] [2018-10-07T02:39:10.687Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-07T02:39:10.687Z] [rules] updated release projects/healthy-lee-1531858128540/releases/cloud.firestore
+[info] +  firestore: released rules firestore.rules to cloud.firestore
+[debug] [2018-10-07T02:39:10.690Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/projects/healthy-lee-1531858128540/locations/-/functions  
+ 
+[debug] [2018-10-07T02:39:11.608Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-07T02:39:11.614Z] [
+  {
+    "config": {
+      "public": "public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "healthy-lee-1531858128540"
+    },
+    "site": "healthy-lee-1531858128540",
+    "version": "sites/healthy-lee-1531858128540/versions/f1ded24ac1b9720c"
+  }
+]
+[info] i  hosting[healthy-lee-1531858128540]: finalizing version...
+[debug] [2018-10-07T02:39:11.616Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/healthy-lee-1531858128540/versions/f1ded24ac1b9720c?updateMask=status  
+
+[debug] [2018-10-07T02:39:13.198Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-07T02:39:13.198Z] [hosting] finalized version for healthy-lee-1531858128540:
+[info] +  hosting[healthy-lee-1531858128540]: version finalized
+[info] i  hosting[healthy-lee-1531858128540]: releasing new version...
+[debug] [2018-10-07T02:39:13.202Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/healthy-lee-1531858128540/releases?version_name=sites/healthy-lee-1531858128540/versions/f1ded24ac1b9720c  
+

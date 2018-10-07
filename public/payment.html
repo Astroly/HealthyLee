@@ -72,11 +72,11 @@
                         </div>
                         <div class="form-group CVV">
                             <label for="cvv">CVV</label>
-                            <input type="text" class="form-control" id="cvv">
+                            <input type="text" class="form-control" maxlength="3" id="cvv">
                         </div>
                         <div class="form-group" id="card-number-field">
                             <label for="cardNumber">Card Number</label>
-                            <input type="text" class="form-control" id="cardNumber">
+                            <input type="text" class="form-control" maxlength="16"id="cardNumber">
                         </div>
                         <div class="form-group" id="expiration-date">
                             <label>Expiration Date</label>
@@ -109,14 +109,16 @@
                             <img src="img/Visa-Logo.png" id="Visa" height="100" width="80">
                         </div>
                         <div class="form-group" id="pay-now">
-                            <button type="submit" class="btn btn-default" id="confirm-purchase" onclick="savePayment()">Confirm</button>
+                            <a class="btn btn-default"  onclick="savePayment()" value="">Confirm</a>
+                            <!-- <button type="submit" class="btn btn-default" id="confirm-purchase" onclick="savePayment()">Confirm</button>-->
+                            <script src="js/savePayment.js"></script>
                         </div>
                     </form>
                 </div>
             </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-
+    <script src="js/savePayment.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="assets/js/jquery.payform.min.js" charset="utf-8"></script>
     <script src="assets/js/script.js"></script>
