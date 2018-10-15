@@ -13,6 +13,6 @@ function signIn(){
         console.log(error);
     });
     alert('loged In')
-    window.location.href="userProfile.html"; 
+
 
  }

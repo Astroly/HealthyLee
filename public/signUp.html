@@ -17,7 +17,7 @@
 
 
 
-                <div class="main-div"align="center">
+                <div align="center">
                     <h3 style="color: #ffffff;-webkit-text-stroke-width: 1px;-webkit-text-stroke-color: #f1c40f;">Sign up</h3>
                     <br/>
                     <input type="text" id="name" placeholder="Name"autocomplete="current-password"/>
@@ -25,7 +25,8 @@
           
                     <input type="text" id="lastname" placeholder="Lastname"autocomplete="current-password"/>
                     <br/>
-           
+     
+
                     <input type="email" id="emailRegis" placeholder="email"autocomplete="current-password"/>
                     <br/>
              
@@ -35,7 +36,7 @@
                     <input type="password" id="confirmPasswordRegis" placeholder="Confirm Password"autocomplete="current-password"/>
                     <br/>
                
-                    <button onclick="saveData()">Sign up</button><br/>
+                    <button type="button" id="singup">Sign up</button><br/>
                     <br/>
                     <br/>
 
@@ -61,13 +62,14 @@
               };
               firebase.initializeApp(config); 
             </script>
-            <script src="js/saveData.js"></script>
+            
             
             
             <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
-            
+    
+            <script language="JavaScript" type="text/javascript" src="js/singup.js"></script>
             
               </body>
 </html>
